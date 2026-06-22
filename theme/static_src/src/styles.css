@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black:   #000000;
+  --color-white:   #f0ede6;
+  --color-accent:  #c8f135;
+  --color-muted:   #3a3a3a;
+  --color-border:  #1a1a1a;
+
+  --font-display: "Mona Sans", sans-serif;
+  --font-body:    "Inter", sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #000000;
+    color: #f0ede6;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  a { color: inherit; text-decoration: none; }
+}
+
+@layer components {
+  /* Mobile: stack grids to single column */
+  @media (max-width: 768px) {
+    #about > div,
+    #contact > div {
+      grid-template-columns: 1fr !important;
+      gap: 3rem !important;
+    }
+    
+    .skills-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .project-row {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .hero-interactive-canvas {
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-interactive-canvas {
+      width: 100vw !important;
+      height: 50vh !important;
+      top: 15% !important;
+      z-index: 1 !important;
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{% load static %}
+
+<section id="hero" style="position: relative; height: 100vh; width: 100%; background: #000000; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 5vw; overflow: hidden;">
+
+  <!-- Ghost background text -->
+  <div style="position: absolute; top: 50%; right: -2vw; transform: translateY(-50%); font-family: 'Mona Sans', sans-serif; font-size: 22vw; font-weight: 900; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.04); white-space: nowrap; pointer-events: none; user-select: none; line-height: 1;">
+    SPARSH
+  </div>
+
+  <!-- Top label -->
+  <div style="position: absolute; top: 7rem; left: 5vw;">
+    <p style="font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.35); text-transform: uppercase;">
+      AI &amp; Data Science — YCCE Nagpur
+    </p>
+  </div>
+
+  <!-- Main content (left side) -->
+  <div style="position: relative; z-index: 10; max-width: 600px; padding-bottom: 5vh; padding-top: 10vh;">
+
+    <!-- Name -->
+    <h1 class="reveal" style="font-family: 'Mona Sans', sans-serif; font-size: clamp(3rem, 8vw, 7rem); font-weight: 900; line-height: 0.88; letter-spacing: -0.03em; color: #f0ede6; margin: 0;">
+      SPARSH<br>
+      <span style="color: #c8f135;">LONARE</span>
+    </h1>
+
+    <!-- Divider -->
+    <div style="width: 6rem; height: 1px; background: rgba(255,255,255,0.15); margin: 2.5rem 0;"></div>
+
+    <!-- Bottom row -->
+    <div style="display: flex; flex-direction: row; align-items: flex-end; gap: 3rem; flex-wrap: wrap;">
+
+      <!-- Description -->
+      <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 330px; margin: 0;">
+        Exploring AI, machine learning, and data science through continuous learning and problem-solving. Passionate about building intelligent solutions and turning ideas into reality.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Right side: interactive 3D element -->
+  <div id="interactive-hero-canvas-container" style="position: relative; z-index: 10; width: 40vw; height: 70vh; min-width: 320px; background: #000000;"></div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="{% static 'js/parallax-image.js' %}"></script>
+<script>
+  initParallaxImage('interactive-hero-canvas-container', '/static/images/luffy.png', {
+  planeWidth: 6,
+});
+</script>

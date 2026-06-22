@@ -1,0 +1,51 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    {% tailwind_css %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparsh Lonare | AI & Software Developer</title>
+    <meta name="description" content="Portfolio of Sparsh Lonare - AI & Software Developer">
+    <meta name="author" content="Sparsh Lonare">
+
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet">
+</head>
+
+<body style="background: #000000; color: #f0ede6; overflow-x: hidden;">
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+
+    <!-- Navbar -->
+    {% include 'components/navbar.html' %}
+
+    <main>
+        {% include 'components/hero.html' %}
+        {% include 'components/about.html' %}
+        {% include 'components/skills.html' %}
+        {% include 'components/projects.html' %}
+        {% include 'components/contact.html' %}
+    </main>
+
+    {% include 'components/footer.html' %}
+    
+
+    <script src="{% static 'js/main.js' %}"></script> 
+    <script src="{% static 'js/lenis.js' %}"></script> 
+    <script src="{% static 'js/gsap.js' %}"></script> 
+    <script src="{% static 'js/parallax-image.js' %}"></script>
+    <script src="{% static 'js/cursor.js' %}"></script>   
+</body>
+</html>

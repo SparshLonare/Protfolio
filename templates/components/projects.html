@@ -1,0 +1,49 @@
+<section id="projects" style="padding: 10rem 5vw; border-top: 1px solid #1a1a1a; background: #000;">
+
+  <!-- Header -->
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 5rem; flex-wrap: wrap; gap: 2rem;">
+    <div>
+      <p class="reveal" style="font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: #c8f135; margin-bottom: 1.5rem;">
+        Projects
+      </p>
+      <h2 class="reveal" style="font-family: 'Mona Sans', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; color: #f0ede6;">
+        Selected<br>work
+      </h2>
+    </div>
+    <a href="https://github.com/SparshLonare" target="_blank" style="font-family: 'Mona Sans', sans-serif; font-weight: 900; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid #1a1a1a; color: rgba(240,237,230,0.4); padding: 0.85rem 2rem; text-decoration: none; transition: all 0.2s;">
+      GitHub ↗
+    </a>
+  </div>
+
+  <!-- Projects list -->
+  <div style="display: flex; flex-direction: column;">
+
+    {% for project in projects %}
+    <!-- Project {{ project.number }} -->
+    <div class="project-row reveal" style="display: grid; grid-template-columns: 80px 1fr auto; gap: 2rem; align-items: start; padding: 2.5rem 0; border-top: 1px solid #1a1a1a;">
+      <p style="font-family: 'Mona Sans', sans-serif; font-size: 0.75rem; font-weight: 900; color: rgba(240,237,230,0.2); letter-spacing: 0.1em; padding-top: 0.2rem;">{{ project.number }}</p>
+      <div>
+        <h3 style="font-family: 'Mona Sans', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #f0ede6; margin-bottom: 0.75rem;">
+          {{ project.title }}
+        </h3>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.88rem; color: rgba(240,237,230,0.4); line-height: 1.7; max-width: 520px; margin-bottom: 1.5rem;">
+          {{ project.description }}
+        </p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          {% for tag in project.tags %}
+          <span style="font-family: 'Inter', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.75rem; border: 1px solid #1a1a1a; color: rgba(240,237,230,0.35);">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div style="display: flex; gap: 1rem; padding-top: 0.2rem;">
+        <a href="{{ project.github_url }}" target="_blank" style="font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(240,237,230,0.35); text-decoration: none; transition: color 0.2s;">GitHub ↗</a>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Bottom border -->
+    <div style="border-top: 1px solid #1a1a1a;"></div>
+
+  </div>
+
+</section>
