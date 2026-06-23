@@ -1,4 +1,4 @@
-# Sparsh Lonare Portfolio (Django)
+# Sparsh Lonare Portfolio (Django) InternID(CITS2284)
 
 This project is a personal portfolio website built with **Django** (server-side rendering) and **Tailwind CSS** (via the `theme` app), with custom UI/animations powered by **GSAP**, **Lenis**, and additional front-end JavaScript.
 
